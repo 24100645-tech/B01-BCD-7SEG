@@ -1,0 +1,18 @@
+PASS: ui_in=0000, uo_out=00000001
+PASS: ui_in=0001, uo_out=01001111
+PASS: ui_in=0010, uo_out=00010010
+PASS: ui_in=0011, uo_out=00000110
+PASS: ui_in=0100, uo_out=01001100
+PASS: ui_in=0101, uo_out=00100100
+PASS: ui_in=0110, uo_out=00100000
+PASS: ui_in=0111, uo_out=00001111
+PASS: ui_in=1000, uo_out=00000000
+PASS: ui_in=1001, uo_out=00000100
+PASS: ui_in=1010, uo_out=11111111
+PASS: ui_in=1011, uo_out=11111111
+PASS: ui_in=1100, uo_out=11111111
+PASS: ui_in=1101, uo_out=11111111
+PASS: ui_in=1110, uo_out=11111111
+PASS: ui_in=1111, uo_out=11111111
+B01 exhaustive 4-bit validation PASS
+tb/tb_b01_7seg.sv:57: $finish called at 160 (1s)
