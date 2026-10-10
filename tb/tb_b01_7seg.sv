@@ -34,8 +34,8 @@ module b01_tb;
         errors = 0;
 
         for (i = 0; i < 16; i = i + 1) begin
-            ui_in = i;
-            expected = expected_output(i);
+            ui_in = i[3:0];
+            expected = expected_output(i[3:0]);
             #10;
 
             if (uo_out !== expected) begin
