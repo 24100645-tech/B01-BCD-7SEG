@@ -1,0 +1,7 @@
+{
+  "DESIGN_NAME": "b01_7seg",
+  "VERILOG_FILES": [
+    "dir::rtl/b01_7seg.sv"
+  ],
+  "PDK": "sky130A"
+}
