@@ -3,5 +3,7 @@
   "VERILOG_FILES": [
     "dir::rtl/b01_7seg.sv"
   ],
-  "PDK": "sky130A"
+  "PDK": "sky130A",
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 100 100"
 }
