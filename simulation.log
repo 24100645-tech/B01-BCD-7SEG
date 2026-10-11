@@ -1,18 +1,21 @@
-PASS: ui_in=0000, uo_out=00000001
-PASS: ui_in=0001, uo_out=01001111
-PASS: ui_in=0010, uo_out=00010010
-PASS: ui_in=0011, uo_out=00000110
-PASS: ui_in=0100, uo_out=01001100
-PASS: ui_in=0101, uo_out=00100100
-PASS: ui_in=0110, uo_out=00100000
-PASS: ui_in=0111, uo_out=00001111
-PASS: ui_in=1000, uo_out=00000000
-PASS: ui_in=1001, uo_out=00000100
-PASS: ui_in=1010, uo_out=11111111
-PASS: ui_in=1011, uo_out=11111111
-PASS: ui_in=1100, uo_out=11111111
-PASS: ui_in=1101, uo_out=11111111
-PASS: ui_in=1110, uo_out=11111111
-PASS: ui_in=1111, uo_out=11111111
-B01 exhaustive 4-bit validation PASS
-tb/tb_b01_7seg.sv:57: $finish called at 160 (1s)
+VCD info: dumpfile docs/b01_wave.vcd opened for output.
+PASS TC1: input=0000 output=00000001
+PASS TC2: input=0001 output=01001111
+PASS TC3: input=0010 output=00010010
+PASS TC4: input=0011 output=00000110
+PASS TC5: input=0100 output=01001100
+PASS TC6: input=0101 output=00100100
+PASS TC7: input=0110 output=00100000
+PASS TC8: input=0111 output=00001111
+PASS TC9: input=1000 output=00000000
+PASS TC10: input=1001 output=00000100
+PASS TC11: input=1010 output=11111111
+PASS TC12: input=1011 output=11111111
+PASS TC13: input=1100 output=11111111
+PASS TC14: input=1101 output=11111111
+PASS TC15: input=1110 output=11111111
+PASS TC16: input=1111 output=11111111
+PASS TC17: transition 9 -> 10
+PASS TC18: transition 15 -> 8
+B01 validation PASS: all checks passed
+tb/tb_b01_7seg.sv:141: $finish called at 210 (1s)
