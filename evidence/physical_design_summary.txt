@@ -1,0 +1,45 @@
+Project: B01-BCD-7SEG
+Source: RUN_2026-10-10_03-30-54/final/metrics.json
+
+SYNTHESIS
+Yosys cell count: 16
+Yosys synthesized cell area: 128.873600
+Sequential area: 0.000000
+
+PHYSICAL DESIGN
+Total instance count: 1881
+Standard-cell instance count: 118
+Standard-cell area: 361.597
+Die area: 10000
+Instance utilization: 0.0534789
+Routed wirelength: 729
+
+TIMING
+Nominal TT setup slack: 4.145643945470728
+Nominal TT hold slack: 4.645049809602297
+Overall setup TNS: 0
+Overall hold TNS: 0
+Setup violation count: 0
+Hold violation count: 0
+
+DESIGN RULE CHECKS
+Routing DRC errors: 0
+Magic DRC errors: 0
+KLayout DRC errors: 0
+
+LAYOUT VERSUS SCHEMATIC
+LVS errors: 0
+LVS device differences: 0
+LVS net differences: 0
+
+FLOW STATUS
+OpenLane log reports: Flow complete.
+
+Original synthesis log:
+RUN_2026-10-10_03-30-54/06-yosys-synthesis/yosys-synthesis.log
+
+Original metrics:
+RUN_2026-10-10_03-30-54/final/metrics.json
+
+Final GDS:
+RUN_2026-10-10_03-30-54/final/gds/b01_7seg.gds

@@ -1,0 +1,1039 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)
+
+1. Executing Liberty frontend: /home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv
+Parsing SystemVerilog input from `/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv' to AST representation.
+Storing AST representation for module `$abstract\b01_7seg'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+cd "/mnt/c/Users/TU DEP TRAI/Documents/B01-BCD-7SEG"
+
+mkdir -p evidence
+
+cp RUN_2026-10-10_03-30-54/06-yosys-synthesis/yosys-synthesis.log \
+   evidence/yosys-synthesis.log
+
+cp RUN_2026-10-10_03-30-54/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log \
+   evidence/sta_preroute_nom_ss.log
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\b01_7seg'.
+Generating RTLIL representation for module `\b01_7seg'.
+
+4.1. Analyzing design hierarchy..
+Top module:  \b01_7seg
+
+4.2. Analyzing design hierarchy..
+Top module:  \b01_7seg
+Removing unused module `$abstract\b01_7seg'.
+Removed 1 unused modules.
+Renaming module b01_7seg to b01_7seg.
+
+5. Executing ATTRMAP pass (move or copy attributes).
+
+6. Executing TRIBUF pass.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \b01_7seg
+
+7.2. Analyzing design hierarchy..
+Top module:  \b01_7seg
+Removed 0 unused modules.
+
+8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv:9$1 in module b01_7seg.
+Removed a total of 0 dead cases.
+
+10. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+11. Executing PROC_INIT pass (extract init attributes).
+
+12. Executing PROC_ARST pass (detect async resets in processes).
+
+13. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+
+14. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\b01_7seg.$proc$/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv:9$1'.
+     1/1: $1\uo_out[7:0]
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\b01_7seg.\uo_out' from process `\b01_7seg.$proc$/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv:9$1'.
+
+16. Executing PROC_DFF pass (convert process syncs to FFs).
+
+17. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+18. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\b01_7seg.$proc$/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv:9$1'.
+Removing empty process `b01_7seg.$proc$/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/rtl/b01_7seg.sv:9$1'.
+Cleaned up 1 empty switch.
+
+19. Executing CHECK pass (checking for obvious problems).
+Checking module b01_7seg...
+Found and reported 0 problems.
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+21. Executing FLATTEN pass (flatten design).
+
+22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+25. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 2 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+26. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+27. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+Performed a total of 0 changes.
+
+28. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 2 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+29. Executing OPT_DFF pass (perform DFF optimizations).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+31. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+32. Executing FSM pass (extract and optimize FSM).
+
+32.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+32.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+32.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+32.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+32.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+32.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+32.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+34. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 2 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+35. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+36. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+Performed a total of 0 changes.
+
+37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 2 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+38. Executing OPT_DFF pass (perform DFF optimizations).
+
+39. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+41. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 address bits (of 32) from memory init port b01_7seg.$auto$mem.cc:351:emit$5 ($auto$proc_rom.cc:155:do_switch$3).
+
+42. Executing PEEPOPT pass (run peephole optimizers).
+
+43. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+44. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module b01_7seg:
+  created 0 $alu and 0 $macc cells.
+
+45. Executing SHARE pass (SAT-based resource sharing).
+
+46. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+47. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 2 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+48. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+49. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+Performed a total of 0 changes.
+
+50. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 2 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+51. Executing OPT_DFF pass (perform DFF optimizations).
+
+52. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+53. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+54. Executing MEMORY pass.
+
+54.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+54.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+54.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+54.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+54.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\b01_7seg': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\b01_7seg': no address FF found.
+
+54.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+54.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+54.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+54.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+54.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+55. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+56. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+57. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 1 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+58. Executing OPT_DFF pass (perform DFF optimizations).
+
+59. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+60. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$3 in module \b01_7seg:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+
+61. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+<suppressed ~4 debug messages>
+
+62. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 11 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+63. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+64. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][3][2]$36:
+      Old ports: A=8'01001100, B=8'00100100, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [5] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [3] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [7:6] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [4] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [2:0] } = { 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [3] 4'0100 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][3][1]$33:
+      Old ports: A=8'00010010, B=8'00000110, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20
+      New ports: A=2'10, B=2'01, Y={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [4] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [2] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [7:5] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [3] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [1:0] } = 6'000010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][3][0]$30:
+      Old ports: A=8'00000001, B=8'01001111, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [7:2] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [0] } = { 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1] 2'00 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][3][3]$39:
+      Old ports: A=8'00100000, B=8'00001111, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23
+      New ports: A=2'10, B=2'01, Y={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [5] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [7:6] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [4:1] } = { 3'000 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][3][4]$42:
+      Old ports: A=8'00000000, B=8'00000100, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$a$25
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$a$25 [2]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$a$25 [7:3] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$a$25 [1:0] } = 7'0000000
+  Optimizing cells in module \b01_7seg.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$24:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$a$25, B=8'11111111, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][2]$a$25 [2] 1'0 }, B=2'11, Y={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [2] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [7:3] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [1] } = { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$21:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22, B=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [3] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [5] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$a$22 [3] 2'10 }, B={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [5] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][1]$b$23 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [6:5] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [3:2] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [7] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [4] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [1] } = { 2'00 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$18:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19, B=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$a$19 [1] 1'1 }, B={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [4] 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][2][0]$b$20 [2] 2'10 }, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13 [4:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13 [7:5] = { 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13 [3] 1'0 }
+  Optimizing cells in module \b01_7seg.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$15:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16, B=8'11111111, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [2] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][1]$a$16 [0] }, B=2'11, Y={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [2] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [7:3] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [1] } = { $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$b$11 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$12:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13, B=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$a$10
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13 [3] 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$a$13 [4:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [6:5] 1'0 $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [3:2] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [0] $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][1][0]$b$14 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$a$10 [6:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$3$rdmux[0][0][0]$a$10 [7] = 1'0
+  Optimizing cells in module \b01_7seg.
+Performed a total of 10 changes.
+
+65. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 11 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Computing hashes of 9 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+66. Executing OPT_SHARE pass.
+
+67. Executing OPT_DFF pass (perform DFF optimizations).
+
+68. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+Removed 0 unused cells and 22 unused wires.
+<suppressed ~1 debug messages>
+
+69. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+<suppressed ~1 debug messages>
+
+70. Rerunning OPT passes. (Maybe there is more to do…)
+
+71. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+72. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+Performed a total of 0 changes.
+
+73. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 8 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+74. Executing OPT_SHARE pass.
+
+75. Executing OPT_DFF pass (perform DFF optimizations).
+
+76. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+77. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+78. Rerunning OPT passes. (Maybe there is more to do…)
+
+79. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+80. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+Performed a total of 0 changes.
+
+81. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 8 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+82. Executing OPT_SHARE pass.
+
+83. Executing OPT_DFF pass (perform DFF optimizations).
+
+84. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+85. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+86. Executing TECHMAP pass (map to technology primitives).
+
+86.1. Executing Verilog-2005 frontend: /nix/store/f1q0w7rd0a4ny4hqvfxlhs4cmariidcy-yosys-0.62/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/f1q0w7rd0a4ny4hqvfxlhs4cmariidcy-yosys-0.62/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+86.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~85 debug messages>
+
+87. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+<suppressed ~4 debug messages>
+
+88. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 29 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Computing hashes of 27 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+89. Executing OPT_DFF pass (perform DFF optimizations).
+
+90. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+91. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+92. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 27 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+93. Executing OPT_DFF pass (perform DFF optimizations).
+
+94. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+95. Executing ABC pass (technology mapping using ABC).
+
+95.1. Extracting gate netlist of module `\b01_7seg' to `<abc-temp-dir>/input.blif'..
+
+95.1.1. Executed ABC.
+Extracted 27 gates and 33 wires to a netlist network with 4 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-QI0s62/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+95.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        4
+ABC RESULTS:               MUX cells:       12
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:        internal signals:       21
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+96. Executing OPT pass (performing simple optimizations).
+
+96.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+<suppressed ~6 debug messages>
+
+96.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 28 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Computing hashes of 26 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+96.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+96.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+Removed 0 unused cells and 19 unused wires.
+<suppressed ~1 debug messages>
+
+96.5. Finished fast OPT passes.
+
+97. Executing HIERARCHY pass (managing design hierarchy).
+
+97.1. Analyzing design hierarchy..
+Top module:  \b01_7seg
+
+97.2. Analyzing design hierarchy..
+Top module:  \b01_7seg
+Removed 0 unused modules.
+
+98. Executing CHECK pass (checking for obvious problems).
+Checking module b01_7seg...
+Found and reported 0 problems.
+
+99. Printing statistics.
+
+=== b01_7seg ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+       30 wire bits
+        2 public wires
+       12 public wire bits
+        2 ports
+       12 port bits
+       26 cells
+        4   $_ANDNOT_
+        1   $_AND_
+       12   $_MUX_
+        1   $_NOR_
+        3   $_NOT_
+        1   $_ORNOT_
+        3   $_OR_
+        1   $_XNOR_
+
+100. Executing OPT pass (performing simple optimizations).
+
+100.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+100.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 26 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+100.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \b01_7seg..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+100.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \b01_7seg.
+Performed a total of 0 changes.
+
+100.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\b01_7seg'.
+Computing hashes of 26 cells of `\b01_7seg'.
+Finding duplicate cells in `\b01_7seg'.
+Removed a total of 0 cells.
+
+100.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+100.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+
+100.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module b01_7seg.
+
+100.9. Finished fast OPT passes. (There is nothing left to do.)
+
+101. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+{
+   "creator": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/tmp/7e386334f6b34c26b21c7226c7953467.lib ",
+   "modules": {
+      "\\b01_7seg": {
+         "num_wires":         20,
+         "num_wire_bits":     30,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 12,
+         "num_ports":         2,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 4,
+            "$_AND_": 1,
+            "$_MUX_": 12,
+            "$_NOR_": 1,
+            "$_NOT_": 3,
+            "$_ORNOT_": 1,
+            "$_OR_": 3,
+            "$_XNOR_": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         20,
+         "num_wire_bits":     30,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 12,
+         "num_ports":         2,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 4,
+            "$_AND_": 1,
+            "$_MUX_": 12,
+            "$_NOR_": 1,
+            "$_NOT_": 3,
+            "$_ORNOT_": 1,
+            "$_OR_": 3,
+            "$_XNOR_": 1
+         }
+      }
+}
+
+102. Printing statistics.
+
+=== b01_7seg ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+       30 wire bits
+        2 public wires
+       12 public wire bits
+        2 ports
+       12 port bits
+       26 cells
+        4   $_ANDNOT_
+        1   $_AND_
+       12   $_MUX_
+        1   $_NOR_
+        3   $_NOT_
+        1   $_ORNOT_
+        3   $_OR_
+        1   $_XNOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+103. Executing TECHMAP pass (map to technology primitives).
+
+103.1. Executing Verilog-2005 frontend: /home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `$_TBUF_'.
+Successfully finished Verilog frontend.
+
+103.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+104. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+105. Executing TECHMAP pass (map to technology primitives).
+
+105.1. Executing Verilog-2005 frontend: /home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/runner/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+105.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+106. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+107. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+107.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\b01_7seg':
+{
+   "creator": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/tmp/7e386334f6b34c26b21c7226c7953467.lib ",
+   "modules": {
+      "\\b01_7seg": {
+         "num_wires":         20,
+         "num_wire_bits":     30,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 12,
+         "num_ports":         2,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 4,
+            "$_AND_": 1,
+            "$_MUX_": 12,
+            "$_NOR_": 1,
+            "$_NOT_": 3,
+            "$_ORNOT_": 1,
+            "$_OR_": 3,
+            "$_XNOR_": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         20,
+         "num_wire_bits":     30,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 12,
+         "num_ports":         2,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 4,
+            "$_AND_": 1,
+            "$_MUX_": 12,
+            "$_NOR_": 1,
+            "$_NOT_": 3,
+            "$_ORNOT_": 1,
+            "$_OR_": 3,
+            "$_XNOR_": 1
+         }
+      }
+}
+
+108. Printing statistics.
+
+=== b01_7seg ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+       30 wire bits
+        2 public wires
+       12 public wire bits
+        2 ports
+       12 port bits
+       26 cells
+        4   $_ANDNOT_
+        1   $_AND_
+       12   $_MUX_
+        1   $_NOR_
+        3   $_NOT_
+        1   $_ORNOT_
+        3   $_OR_
+        1   $_XNOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+
+[INFO] Using generated ABC script '/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/06-yosys-synthesis/AREA_0.abc'…
+
+109. Executing ABC pass (technology mapping using ABC).
+
+109.1. Extracting gate netlist of module `\b01_7seg' to `/tmp/yosys-abc-TEyJhG/input.blif'..
+
+109.1.1. Executed ABC.
+Extracted 26 gates and 30 wires to a netlist network with 4 inputs and 8 outputs.
+Running ABC script: /tmp/yosys-abc-TEyJhG/abc.script
+ABC: ======== ABC command line "source /tmp/yosys-abc-TEyJhG/abc.script"
+ABC: + read_blif /tmp/yosys-abc-TEyJhG/input.blif 
+ABC: + read_lib -w /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/tmp/7e386334f6b34c26b21c7226c7953467.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.06 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/tmp/7e386334f6b34c26b21c7226c7953467.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.09 sec
+ABC: Memory =    9.54 MB. Time =     0.09 sec
+ABC: Warning: Detected 2 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
+ABC: Setting output load to be 33.442001.
+ABC: + source /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: WireLoad = "none"  Gates =     16 ( 18.8 %)   Cap = 19.9 ff (  2.3 %)   Area =      128.87 ( 81.2 %)   Delay =   939.19 ps  ( 18.8 %)               
+ABC: Path  0 --       3 : 0    6 pi                      A =   0.00  Df =  69.9  -38.7 ps  S = 103.7 ps  Cin =  0.0 ff  Cout =  21.4 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      26 : 5    1 sky130_fd_sc_hd__a41o_2 A =  11.26  Df = 939.2  -89.2 ps  S = 173.6 ps  Cin =  2.3 ff  Cout =  33.4 ff  Cmax = 325.0 ff  G = 1436  
+ABC: Start-point = pi2 (\ui_in [1]).  End-point = po3 (\uo_out [3]).
+ABC: netlist                       : i/o =    4/    8  lat =    0  nd =    16  edge =     41  area =128.89  delay = 4.00  lev = 4
+ABC: + write_blif /tmp/yosys-abc-TEyJhG/output.blif 
+
+109.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a41o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:        1
+ABC RESULTS:        internal signals:       18
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+110. Executing SETUNDEF pass (replace undef values with defined constants).
+
+111. Executing HILOMAP pass (mapping to constant drivers).
+
+112. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+113. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \b01_7seg..
+Removed 0 unused cells and 30 unused wires.
+<suppressed ~1 debug messages>
+
+114. Executing INSBUF pass (insert buffer cells for connected wires).
+
+115. Executing CHECK pass (checking for obvious problems).
+Checking module b01_7seg...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/runner/work/B01-BCD-7SEG/B01-BCD-7SEG/runs/RUN_2026-10-10_03-30-54/tmp/7e386334f6b34c26b21c7226c7953467.lib ",
+   "modules": {
+      "\\b01_7seg": {
+         "num_wires":         10,
+         "num_wire_bits":     20,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 12,
+         "num_ports":         2,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         16,
+         "num_submodules":       0,
+         "area":              128.873600,
+         "sequential_area":    0.000000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 1,
+            "sky130_fd_sc_hd__a21bo_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 1,
+            "sky130_fd_sc_hd__a41o_2": 1,
+            "sky130_fd_sc_hd__inv_2": 3,
+            "sky130_fd_sc_hd__nor2_2": 2,
+            "sky130_fd_sc_hd__o21ai_2": 2,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__or2_2": 2,
+            "sky130_fd_sc_hd__xnor2_2": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         10,
+         "num_wire_bits":     20,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 12,
+         "num_ports":         2,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         16,
+         "num_submodules":       0,
+         "area":              128.873600,
+         "sequential_area":    0.000000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 1,
+            "sky130_fd_sc_hd__a21bo_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 1,
+            "sky130_fd_sc_hd__a41o_2": 1,
+            "sky130_fd_sc_hd__inv_2": 3,
+            "sky130_fd_sc_hd__nor2_2": 2,
+            "sky130_fd_sc_hd__o21ai_2": 2,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__or2_2": 2,
+            "sky130_fd_sc_hd__xnor2_2": 1
+         }
+      }
+}
+
+116. Printing statistics.
+
+=== b01_7seg ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       10        - wires
+       20        - wire bits
+        2        - public wires
+       12        - public wire bits
+        2        - ports
+       12        - port bits
+       16  128.874 cells
+        1    10.01   sky130_fd_sc_hd__a211o_2
+        1    10.01   sky130_fd_sc_hd__a21bo_2
+        1    8.758   sky130_fd_sc_hd__a21o_2
+        1    8.758   sky130_fd_sc_hd__a31o_2
+        1   11.261   sky130_fd_sc_hd__a41o_2
+        3   11.261   sky130_fd_sc_hd__inv_2
+        2   12.512   sky130_fd_sc_hd__nor2_2
+        2   17.517   sky130_fd_sc_hd__o21ai_2
+        1    10.01   sky130_fd_sc_hd__o21ba_2
+        2   12.512   sky130_fd_sc_hd__or2_2
+        1   16.266   sky130_fd_sc_hd__xnor2_2
+
+   Chip area for module '\b01_7seg': 128.873600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+117. Executing Verilog backend.
+Dumping module `\b01_7seg'.
+
+118. Executing JSON backend.
